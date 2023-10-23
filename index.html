@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>gif loop count editor</title>
+
+    <script type="module" src="scripts/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+  </head>
+  <body>
+    <div id="main">
+      <h1 id="title">gif loop count editor</h1>
+      <div id="settings" class="section">
+        <h2>settings</h2>
+        <div class="setting">
+          <label for="file-input">files to edit</label>
+          <input id="file-input" name="file input" type="file" accept="image/gif" multiple>
+        </div>
+        <div class="setting">
+          <label for="loop-count">new loop count (-1 for forever, max is 65535)</label>
+          <input id="loop-count" name="loop count" type="number" min="-1" max="65535" value="0">
+        </div>
+        <button id="go-button" title="javascript not enabled" disabled>go</button>
+        <p id="javascript-warning">this tool doesn't work without javascript enabled</p>
+      </div>
+      <div class="section">
+        <h2>results</h2>
+        <div id="results-buttons">
+          <button id="clear-button">clear all</button>
+          <button id="download-button">download all</button>
+        </div>
+        <ul id="downloads"></ul>
+      </div>
+    </div>
+  </body>
+</html>

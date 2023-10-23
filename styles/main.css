@@ -1,0 +1,129 @@
+:root {
+	line-height: 1.4;
+	font-family: Verdana, sans-serif;
+
+	--color-text: #111;
+	--color-link: #15c;
+
+	--color-foreground: #eee;
+	--color-background: #ddd;
+	--color-border: #aaa;
+	
+	color: var(--color-text);
+	background-color: var(--color-background);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-text: #eee;
+		--color-link: #4cf;
+
+		--color-foreground: #444;
+		--color-background: #222;
+		--color-border: #666;
+	}
+}
+
+#main {
+	margin: auto;
+	padding: 80px 0;
+	max-width: 600px;
+}
+
+.setting {
+	display: flex;
+	flex-direction: column;
+	padding: .2em 0;
+}
+
+.section {
+	margin-bottom: 1em;
+	overflow: hidden;
+	background-color: var(--color-foreground);
+	padding: 1em 2em;
+	border-radius: 5px;
+	box-shadow: #0003 4px 3px 5px;
+}
+
+.section > h2 {
+	margin-top: 0;
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: 1px solid var(--color-border);
+}
+
+#results-buttons {
+	display: flex;
+	gap: 5px;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+#results-buttons > button {
+	flex: 1;
+}
+
+#go-button {
+	margin-top: 1em;
+	min-width: 25%;
+	float: right;
+}
+
+#title {
+	margin-top: 0;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#downloads > li {
+	padding: 5px 0;
+	list-style-type: none;
+	display: flex;
+	gap: 1em;
+}
+
+#downloads > li > button {
+	width: 24px;
+	height: 24px;
+}
+
+button {
+	height: 2em;
+	font-size: 16px;
+	box-shadow: #0005 2px 1px 3px;
+}
+
+button:hover {
+	filter: brightness(.8);
+}
+
+button:disabled {
+	color: black;
+}
+
+button:disabled:hover {
+	filter: none;
+}
+
+#javascript-warning {
+	margin: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	padding: .1em 0;
+}
+
+a {
+	color: var(--color-link);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
